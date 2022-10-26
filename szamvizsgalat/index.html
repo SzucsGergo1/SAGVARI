@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számvizsgálat</title>
+    <script src="matek.js" charset="utf-8"></script>
+    <style>
+        body{background-color: #42f5bf;}
+    </style>
+</head>
+<body>
+    <h2>Számvizsgálat</h2>
+    <form name="urlap">
+        <h3>Adj meg egy számot</h3>
+        <input type="text" name="beszam">
+        <input type="button" value="Vizsgálat" onclick="check()">
+    </form>
+    <p>Paritás:<span id="paritas">?</span></p>
+    <p>Négyzetszám:<span id="negyzet">?</span></p>
+    <p>Számjegyekösszege:<span id="szamosszeg">?</span></p>
+</body>
+</html>

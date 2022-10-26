@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <title>Találd meg Kanyét játék</title>
+    <style type="text/css">
+        html, body {height: 100%;margin:0;padding:0;}
+        body{
+            background: url("coffe_beans.jpg");
+            background-size: cover;
+        }
+        img{
+            width: 40px;
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="kanye.png" alt="" onclick="talalat()">
+    <script>
+        function talalat() {
+            const findTime = new Date().getTime() - window.startTime;
+            const findSeconds = findTime / 1000;
+            alert('Megtaláltad '+findSeconds+' másodperc alatt Kanye Westet!');
+            newJatek();
+        }
+        function newJatek() {
+            window.startTime = new Date().getTime();
+            const maxX = document.body.clientWidth - 45;
+            const maxY = document.body.clientHeight - 50;
+            const x = Math.round(Math.random() * maxX);
+            const y = Math.round(Math.random() * maxY);
+            document.querySelector('img').style.top = y + 'px';
+            document.querySelector('img').style.left = x + 'px';
+        }
+        newJatek();
+    </script>
+</body>
+</html>
